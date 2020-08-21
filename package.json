@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/TendoGit/vidly/issues"
   },
-  "homepage": "https://github.com/TendoGit/vidly#readme"
+  "homepage": "https://github.com/TendoGit/vidly#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
