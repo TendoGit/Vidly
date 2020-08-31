@@ -55,7 +55,14 @@ router.put('/:id', async (req, res) => {
         dailyRentalRate: req.body.dailyRentalRate
     }, {new: true})
 
-    if (!movie) return res.status(404).send('The movie with the given ID was not found');
+    if (!movie) return res.status(404).send('The movie with the given ID was not found.');
+
+    res.send(movie);
+});
+
+router.delete('/:id', async (req, res) => {
+    const movie = await Movie.findByIdAndRemove(req.params.id);
+    if (!movie) return res.status(404).send('The movie with the given ID was not found.')
 
     res.send(movie);
 });
